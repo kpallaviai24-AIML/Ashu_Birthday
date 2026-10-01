@@ -1,0 +1,200 @@
+/* =========================================
+   PAGE ANIMATION
+========================================= */
+
+.page.active .container {
+
+    animation:
+        pageEnter 0.8s ease;
+}
+
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   HEART
+========================================= */
+
+.big-heart {
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.18);
+    }
+}
+
+
+/* =========================================
+   GIFT
+========================================= */
+
+.gift-box {
+
+    animation:
+        giftFloat 2s infinite ease-in-out;
+}
+
+
+@keyframes giftFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+    }
+}
+
+
+/* =========================================
+   CELEBRATION
+========================================= */
+
+.celebration-symbols {
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    animation:
+        sparkle 1.5s infinite alternate;
+}
+
+
+@keyframes sparkle {
+
+    from {
+
+        opacity: 0.6;
+
+        transform:
+            scale(0.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1.05);
+    }
+}
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    font-size: 25px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart linear forwards;
+}
+
+
+@keyframes floatHeart {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti-piece {
+
+    position: fixed;
+
+    top: -40px;
+
+    font-size: 22px;
+
+    z-index: 10000;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall linear forwards;
+}
+
+
+@keyframes confettiFall {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
